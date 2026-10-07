@@ -4,6 +4,11 @@ A Machine Learning project evaluating collaborative filtering algorithms on movi
 
 ---
 
+## Live demo
+[Click here for live demo](https://ai-recommender-systems-va.streamlit.app/)
+
+---
+
 ## Project Overview
 
 This repository demonstrates matrix factorization and collaborative filtering techniques using the **Surprise** library. The project benchmarks baseline models against **Singular Value Decomposition (SVD)** and **k-Nearest Neighbors (KNN)** using Cross-Validation RMSE, followed by an interactive inspection dashboard.
@@ -46,8 +51,9 @@ recommender_systems_inteligent_systems/
 ## Getting Started
 
 ### 1. Clone the repository
-git clone https://github.com/v-apostolov7/recommender_systems_inteligent_systems.git
-cd recommender_systems_inteligent_systems
+git clone https://github.com/v-apostolov7/ai-recommender-systems-va.git
+
+cd ai-recommender-systems-v
 
 ### 2. Set up virtual environment & install dependencies
 python -m venv venv
