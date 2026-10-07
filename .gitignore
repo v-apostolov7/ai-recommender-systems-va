@@ -1,0 +1,8 @@
+main.py
+demo.py
+database/ratings.csv
+.gitattributes
+.idea/
+__pycache__/
+venv/
+*.pyc
