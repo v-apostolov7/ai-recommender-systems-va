@@ -4,6 +4,11 @@ A Machine Learning project evaluating collaborative filtering algorithms on movi
 
 ---
 
+## Live demo
+[Click here for live demo](https://ai-recommender-systems-va.streamlit.app/)
+
+---
+
 ## Project Overview
 
 This repository demonstrates matrix factorization and collaborative filtering techniques using the **Surprise** library. The project benchmarks baseline models against **Singular Value Decomposition (SVD)** and **k-Nearest Neighbors (KNN)** using Cross-Validation RMSE, followed by an interactive inspection dashboard.
@@ -26,6 +31,7 @@ recommender_systems_inteligent_systems/
 │   ├── data_loader.py         # Dataset sampling and Surprise Reader config
 │   ├── models.py              # Dictionary registry of benchmark models
 │   └── train_eval.py          # Cross-validation & RMSE evaluation logic
+├── main.py                     # Comparison of the 3 models and generating of model.pkl
 ├── app.py                     # Streamlit comparison dashboard
 ├── model.pkl                  # Serialized trained SVD model
 ├── requirements.txt           # Python dependencies
@@ -46,8 +52,9 @@ recommender_systems_inteligent_systems/
 ## Getting Started
 
 ### 1. Clone the repository
-git clone https://github.com/v-apostolov7/recommender_systems_inteligent_systems.git
-cd recommender_systems_inteligent_systems
+git clone https://github.com/v-apostolov7/ai-recommender-systems-va.git
+
+cd ai-recommender-systems-v
 
 ### 2. Set up virtual environment & install dependencies
 python -m venv venv
