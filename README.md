@@ -23,9 +23,9 @@ This repository demonstrates matrix factorization and collaborative filtering te
 ## Repository Architecture
 
 ```
-recommender_systems_inteligent_systems/
+ai-recommender-systems-va/
 ├── database/
-│   ├── ratings.csv            # Excluded: Original dataset (~740 MB)
+│   ├── ratings.csv            # Excluded: Original dataset from MovieLens (~740 MB)
 │   └── ratings_sample.csv     # Lightweight sample for testing & demo
 ├── src/
 │   ├── data_loader.py         # Dataset sampling and Surprise Reader config
