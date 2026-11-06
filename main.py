@@ -5,7 +5,10 @@ from surprise import SVD, dump
 
 
 def main():
-    path = 'database/ratings.csv'
+    try:
+        path = 'database/ratings.csv'
+    except FileNotFoundError:
+        path = 'database/ratings_sample.csv'
 
     # 1. Зареждане
     print("Зареждане на данни...")
