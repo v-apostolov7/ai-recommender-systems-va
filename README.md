@@ -23,15 +23,15 @@ This repository demonstrates matrix factorization and collaborative filtering te
 ## Repository Architecture
 
 ```
-recommender_systems_inteligent_systems/
+ai-recommender-systems-va/
 ├── database/
-│   ├── ratings.csv            # Excluded: Original dataset (~740 MB)
+│   ├── ratings.csv            # Excluded: Original dataset from MovieLens (~740 MB)
 │   └── ratings_sample.csv     # Lightweight sample for testing & demo
 ├── src/
 │   ├── data_loader.py         # Dataset sampling and Surprise Reader config
 │   ├── models.py              # Dictionary registry of benchmark models
 │   └── train_eval.py          # Cross-validation & RMSE evaluation logic
-├── main.py                     # Comparison of the 3 models and generating of model.pkl
+├── main.py                    # Comparison of the 3 models and generating of model.pkl
 ├── app.py                     # Streamlit comparison dashboard
 ├── model.pkl                  # Serialized trained SVD model
 ├── requirements.txt           # Python dependencies
