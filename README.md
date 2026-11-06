@@ -54,7 +54,7 @@ ai-recommender-systems-va/
 ### 1. Clone the repository
 git clone https://github.com/v-apostolov7/ai-recommender-systems-va.git
 
-cd ai-recommender-systems-v
+cd ai-recommender-systems-va
 
 ### 2. Set up virtual environment & install dependencies
 python -m venv venv
@@ -70,6 +70,12 @@ streamlit run app.py
 
 ## Evaluation & SVD Behavior
 
-The production inference pipeline uses the **SVD (Singular Value Decomposition)** model. In collaborative filtering:
-* Ratings generally span the range [0.5, 5.0].
-* Average absolute residuals between predicted and actual ratings typically hover between **0.8 and 1.2**, consistent with benchmark MovieLens performance on sparse matrices.
+The production inference pipeline uses the **SVD (Singular Value Decomposition)** model, which is benchmarked against **KNNBasic** and a baseline **NormalPredictor**. 
+
+**Data Processing & Sampling:**
+To optimize memory usage and ensure rapid cross-validation, the dataset is randomly sampled down to **100,000 records** (`random_state=42`) prior to model training.
+
+**Performance Metrics:**
+- All collaborative filtering predictions are constrained to the official rating scale of **[0.5, 5.0]**.
+- Models are evaluated using **3-fold Cross-Validation** with **RMSE (Root Mean Square Error)** as the primary metric.
+- Average absolute residuals between predicted and actual SVD ratings typically hover between **0.8 and 1.2**, consistent with benchmark MovieLens performance on sparse matrices.
